@@ -51,7 +51,7 @@ zip_ref.close();
 if sys.argv[1] == "check_all":
     sys.argv[1] = '[A-Za-z0-9]+'
 
-#Regex for location test names in the files
+#Regex for locating test names in the files
 test_name = 'test_'+ sys.argv[1] + '_[A-Za-z0-9]*'
 #test_name = 'test_'+ sys.argv[1] + '_.*'
 #test_python_[A-Za-z0-9]*
