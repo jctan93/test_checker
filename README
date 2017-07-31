@@ -1,0 +1,6 @@
+The python file/script has to be run with the following arguments in the following order:
+	1)Name of tests eg. if you want to check for "test_python_helloword", you should enter "python"
+		- You can also enter "check_all" if you do not have any specific tests that you want to check for
+	2)Name of archive/zip file to extract from
+	3)Name of output file
+	
