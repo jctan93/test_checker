@@ -44,9 +44,13 @@ if not os.path.isfile(sys.argv[2]):
     print("File", sys.argv[2] , " does not exist")
     quit()
 
-zip_ref = zipfile.ZipFile(sys.argv[2], "r");
-zip_ref.extractall("archive");
-zip_ref.close();
+try:
+    zip_ref = zipfile.ZipFile(sys.argv[2], "r");
+    zip_ref.extractall("archive");
+    zip_ref.close();
+except zipfile.BadZipFile:
+    print("File", sys.argv[2], " is not a zip file, exiting now!")
+    quit()
 
 if sys.argv[1] == "check_all":
     sys.argv[1] = '[A-Za-z0-9]+'
